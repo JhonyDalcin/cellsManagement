@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<div th:fragment="nav-sidebar">
+    <nav class="navbar navbar-dark bg-dark p-2">
+        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMain" aria-controls="sidebarMain">
+            <i class="bi bi-list fs-3"></i> </button>
+        <span class="navbar-brand mb-0 h1 mx-auto" th:text="#{index.page.title}">App Title</span>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebarMain" aria-labelledby="sidebarMainLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title" id="sidebarMainLabel">Menu Principal</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a th:href="@{/person}" class="nav-link text-white p-3 border-bottom border-secondary">
+                        <i class="bi bi-person-bounding-box me-2"></i> Person
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/user}" class="nav-link text-white p-3 border-bottom border-secondary">
+                        <i class="bi bi-shield-lock me-2"></i> User
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/cells}" class="nav-link text-white p-3 border-bottom border-secondary">
+                        <i class="bi bi-people me-2"></i> Cells
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/category}" class="nav-link text-white p-3 border-bottom border-secondary">
+                        <i class="bi bi-tags me-2"></i> Category
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/net}" class="nav-link text-white p-3 border-bottom border-secondary">
+                        <i class="bi bi-diagram-3 me-2"></i> Net
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="p-3 border-top border-secondary">
+            <small class="text-secondary">Conectado como: Admin</span></small>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

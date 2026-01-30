@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{index.page.title}" >Title</title>
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/webjars/bootstrap-icons/1.11.2/font/bootstrap-icons.css}" rel="stylesheet">
+    <style>
+        .nav-link:hover {
+            background-color: #495057;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="~{fragments/sidebar :: nav-sidebar}"></div>
+
+<main class="container mt-4 mb-5">
+    Main
+</main>
+
+<div th:replace="~{fragments/footer :: nav-footer}"></div>
+
+<!-- Bootstrap JS -->
+<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+</html>
